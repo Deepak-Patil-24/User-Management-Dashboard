@@ -1,0 +1,55 @@
+<%- include('../includes/header') %>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="mb-4"><%= product ? 'Edit Product' : 'Add New Product' %></h1>
+                
+                <form action="<%= product ? '/products/' + product._id + '?_method=PUT' : '/products' %>" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Product Name:</label>
+                        <input type="text" name="name" class="form-control" 
+                               value="<%= product ? product.name : '' %>" required>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Description:</label>
+                        <textarea name="description" class="form-control" rows="3" required><%= product ? product.description : '' %></textarea>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Price:</label>
+                                <input type="number" name="price" step="0.01" class="form-control" 
+                                       value="<%= product ? product.price : '' %>" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Category:</label>
+                                <select name="category" class="form-select" required>
+                                    <option value="">Select Category</option>
+                                    <option value="Electronics" <%= product && product.category === 'Electronics' ? 'selected' : '' %>>Electronics</option>
+                                    <option value="Clothing" <%= product && product.category === 'Clothing' ? 'selected' : '' %>>Clothing</option>
+                                    <option value="Books" <%= product && product.category === 'Books' ? 'selected' : '' %>>Books</option>
+                                    <option value="Other" <%= product && product.category === 'Other' ? 'selected' : '' %>>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <%= product ? 'Update Product' : 'Create Product' %>
+                        </button>
+                        <a href="/products" class="btn btn-outline-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../includes/footer') %>
