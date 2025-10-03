@@ -13,7 +13,7 @@ A full-stack web application with React frontend and Node.js backend.
 - Frontend: React, Bootstrap
 - Backend: Node.js, Express.js, MongoDB, Mongoose
 - Authentication: Express Sessions
--
+
 ### Backend Setup
 1. cd backend
 2. npm install
