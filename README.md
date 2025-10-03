@@ -9,11 +9,11 @@ A full-stack web application with React frontend and Node.js backend.
 - User Profile Management
 - Responsive Bootstrap Design
 
-- ## Tech Stack
+## Tech Stack
 - Frontend: React, Bootstrap
 - Backend: Node.js, Express.js, MongoDB, Mongoose
 - Authentication: Express Sessions
-
+-
 ### Backend Setup
 1. cd backend
 2. npm install
