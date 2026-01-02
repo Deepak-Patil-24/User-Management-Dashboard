@@ -1,16 +1,17 @@
 # User Management Dashboard
 
-A full-stack web application with React frontend and Node.js backend.
+A full-stack web application with EJS frontend and Node.js backend.
 
 ## Features
 - User Authentication (Register/Login/Logout)
 - Product CRUD Operations
 - Search and Filter Products
 - User Profile Management
+- Server-side Rendering using EJS
 - Responsive Bootstrap Design
 
 ## Tech Stack
-- Frontend: React, Bootstrap
+- Frontend: HTML, CSS, EJS, Bootstrap
 - Backend: Node.js, Express.js, MongoDB, Mongoose
 - Authentication: Express Sessions
 
